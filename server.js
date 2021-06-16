@@ -2,7 +2,8 @@ var fs = require('fs'),
     http = require('http');
 
 http.createServer(function (req, res) {
-  fs.readFile(__dirname + req.url, function (err,data) {
+  var get_url=decodeURI(req.url)
+  fs.readFile(__dirname + get_url, function (err,data) {
     if (err) {
       res.writeHead(404);
       res.end(JSON.stringify(err));
@@ -11,4 +12,4 @@ http.createServer(function (req, res) {
     res.writeHead(200);
     res.end(data);
   });
-}).listen(8080);
+}).listen(80);
