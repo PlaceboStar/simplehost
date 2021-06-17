@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'archeblademaps'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_67d88114de7648dca06a7f52fa4a5e08 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8257fed8042149c19cd7e2e29447690a }}
         package: .
